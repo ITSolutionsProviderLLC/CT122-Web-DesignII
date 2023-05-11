@@ -1,0 +1,242 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>JavaScript Show/Hide HTML content</title>
+
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+		}
+
+		#container {
+			width: 600px;
+			border: 1px solid grey;
+			padding: 10px;
+
+		}
+
+		#image {
+			float: left;
+			width: 400px;
+			height: 300px;
+		}
+
+		#imagetext {
+			height: 300px;
+			padding: 10px;
+		}
+
+		#nav {
+			text-align: center;
+			word-spacing: 15px;
+		}
+
+		#image {
+			padding: 10px;
+		}
+
+		#links {
+			line-height: 35px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function topstories() {
+			//when this function is clicked, the 'inline-block' value would display the html content for 'SHOWtopstories' and block all others
+			document.getElementById("SHOWtopstories").style.display = "inline-block";
+			document.getElementById("SHOWentertainment").style.display = "none";
+			document.getElementById("SHOWsports").style.display = "none";
+			document.getElementById("SHOWworld").style.display = "none";
+			document.getElementById("SHOWvideo").style.display = "none";
+		}
+		function entertainment() {
+			//when this function is clicked, the 'inline-block' value would display the html content for 'SHOWentertainment' and block all others
+			document.getElementById("SHOWtopstories").style.display = "none";
+			document.getElementById("SHOWentertainment").style.display = "inline-block";
+			document.getElementById("SHOWsports").style.display = "none";
+			document.getElementById("SHOWworld").style.display = "none";
+			document.getElementById("SHOWvideo").style.display = "none";
+		}
+		function sports() {
+			//when clicked, the 'inline-block' value would display the html content for 'SHOWsports' and block all others
+			document.getElementById("SHOWtopstories").style.display = "none";
+			document.getElementById("SHOWentertainment").style.display = "none";
+			document.getElementById("SHOWsports").style.display = "inline-block";
+			document.getElementById("SHOWworld").style.display = "none";
+			document.getElementById("SHOWvideo").style.display = "none";
+		}
+		function world() {
+			//when clicked, the 'inline-block' value would display the html content for 'SHOWworld' and block all others
+			document.getElementById("SHOWtopstories").style.display = "none";
+			document.getElementById("SHOWentertainment").style.display = "none";
+			document.getElementById("SHOWsports").style.display = "none";
+			document.getElementById("SHOWworld").style.display = "inline-block";
+			document.getElementById("SHOWvideo").style.display = "none";
+		}
+		function video() {
+			//when clicked, the 'inline-block' value would display the html content for 'SHOWvideo' and block all others
+			document.getElementById("SHOWtopstories").style.display = "none";
+			document.getElementById("SHOWentertainment").style.display = "none";
+			document.getElementById("SHOWsports").style.display = "none";
+			document.getElementById("SHOWworld").style.display = "none";
+			document.getElementById("SHOWvideo").style.display = "inline-block";
+		}
+
+
+		function Family() {
+			//when this function is clicked, the 'inline-block' value would display the html content for 'SHOWtopstories' and block all others
+			document.getElementById("SHOWfamily").style.display = "inline-block";
+			document.getElementById("SHOWkids").style.display = "none";
+			document.getElementById("SHOWsports").style.display = "none";
+			document.getElementById("SHOWhealth").style.display = "none";
+			document.getElementById("SHOWmovies").style.display = "none";
+		}
+		function Kids() {
+			//when this function is clicked, the 'inline-block' value would display the html content for 'SHOWentertainment' and block all others
+			document.getElementById("SHOWfamily").style.display = "none";
+			document.getElementById("SHOWkids").style.display = "inline-block";
+			document.getElementById("SHOWfood").style.display = "none";
+			document.getElementById("SHOWhealth").style.display = "none";
+			document.getElementById("SHOWmovies").style.display = "none";
+		}
+		function Food() {
+			//when clicked, the 'inline-block' value would display the html content for 'SHOWsports' and block all others
+			document.getElementById("SHOWfamily").style.display = "none";
+			document.getElementById("SHOWkids").style.display = "none";
+			document.getElementById("SHOWfood").style.display = "inline-block";
+			document.getElementById("SHOWhealth").style.display = "none";
+			document.getElementById("SHOWmovies").style.display = "none";
+		}
+		function Health() {
+			//when clicked, the 'inline-block' value would display the html content for 'SHOWworld' and block all others
+			document.getElementById("SHOWfamily").style.display = "none";
+			document.getElementById("SHOWkids").style.display = "none";
+			document.getElementById("SHOWfood").style.display = "none";
+			document.getElementById("SHOWhealth").style.display = "inline-block";
+			document.getElementById("SHOWmovies").style.display = "none";
+		}
+		function Movies() {
+			//when clicked, the 'inline-block' value would display the html content for 'SHOWvideo' and block all others
+			document.getElementById("SHOWfamily").style.display = "none";
+			document.getElementById("SHOWkids").style.display = "none";
+			document.getElementById("SHOWfood").style.display = "none";
+			document.getElementById("SHOWhealth").style.display = "none";
+			document.getElementById("SHOWmovies").style.display = "inline-block";
+		}
+
+
+	</script>
+</head>
+
+<body>
+
+	<div id="container">
+
+		<div id="nav">
+			<a href="#" id="topstories" onclick="topstories()">Top Stories<a>
+					<a href="#" id="entertainment" onclick="entertainment()">Entertainment<a>
+							<a href="#" id="sports" onclick="sports()">Sports<a>
+									<a href="#" id="world" onclick="world()">World<a>
+											<a href="#" id="video" onclick="video()">Video<a>
+		</div>
+
+		<div style="display:inline-block" id="SHOWtopstories">
+			<img align="left" src="stories.png" width="300" height="300">
+			Click the links to read our top stories from around the world.
+			<br><br><a href="#" onclick="entertainment()">Entertainment<a>
+					<br><br><a href="#" onclick="sports()">Sports<a>
+							<br><br><a href="#" onclick="world()">World<a>
+									<br><br><a href="#" onclick="video()">Video<a>
+
+		</div>
+
+		<div style="display:none" id="SHOWtopstories">
+			<h3>Top Stories</h3>
+			<p><img align="left" src="stories.png" width="300" height="300"> here are many variations of passages of
+				Lorem Ipsum available, but the majority have suof passages of Lorem Ipsum available, but the majority
+				have suffered alteration in some form, by injected humourhere are many variations of passages of Lorem
+				Ipsum available, but the majority have suffered alteration in some form, by injected humour </p>
+		</div>
+
+
+		<div style="display:none" id="SHOWentertainment">
+			<h3>Entertainment</h3>
+			<p><img align="left" src="Entertainment.png" width="300" height="300"> here are many variations of passages
+				of Lorem Ipsum available, but the have suffered alteration in some form, by injected humourhere are many
+				variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+				by injected humour </p>
+		</div>
+
+
+		<div style="display:none" id="SHOWsports">
+			<h3>Sports</h3>
+			<p><img align="left"
+					src="https://cdn.britannica.com/81/198481-050-10CED2D9/Gilberto-Godoy-Filho-ball-Brazil-Argentina-volleyball-2007.jpg"
+					width="300" height="300"> here are many variations of passages of Lorem Ipsum available, but the
+				majority have suffered alteration in some form, by injected humour. here are many variations of passages
+				of Lorem Ipsum available, but thef passages of Lorem Ipsum available, but the majority have suffered
+				alteration in some form, by injected humour </p>
+		</div>
+
+		<div style="display:none" id="SHOWworld">
+			<h3>World</h3>
+			<p><img align="left" src="http://larvalsubjects.files.wordpress.com/2012/04/earth_from_space1.jpg"
+					width="300" height="300"> here are many variations of passages of Lorem Ipsum available, but the are
+				many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
+				form, by injected humourhere are many variations of passages of Lorem Ipsum available, but the majority
+				have suffered alteration in some form, by injected humour </p>
+		</div>
+
+		<div style="display:none" id="SHOWvideo">
+			<h3>Video</h3>
+			<p><img align="left" src="Video.jpg" width="300" height="300"> here are many variations of passages of Lorem
+				Ipsum available, but the majority have suffered alteration in some form, by injected humour. here are
+				many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
+				form, by injected humourhere are many variations of passages of Lorem Ipsum available, </p>
+		</div>
+
+		<hr>
+		<h4>New links</h4>
+		<!-- LINKS UPDATE -->
+
+		<a href="#" id="Family" onclick="Family()" style="padding: 10px;">Family<a>
+				<a href="#" id="Kids" onclick="Kids()">Kids<a>
+					<a href="#" id="Food" onclick="Food()">Food<a>
+								<a href="#" id="Health" onclick="Health()">Health<a>
+										<a href="#" id="Movies" onclick="Movies()"> Movies <a>
+
+
+												<div>
+
+													<div style="display:inline-block" id="SHOWfamily">
+														<h1>Familly</h1>
+														<p><img align="left" src="Familly.jpg" width="300" height="300">
+														</p>
+													</div>
+													<div style="display:none" id="SHOWfood">
+														<h1>Food</h1>
+														<p><img align="left" src="Food.jpg" width="300" height="300">
+														</p>
+													</div>
+													<div style="display:none" id="SHOWhealth">
+														<h1>Health</h1>
+														<p><img align="left" src="Health.jpg" width="300" height="300">
+														</p>
+													</div>
+													<div style="display:none" id="SHOWkids">
+														<h1>Kids</h1>
+														<p><img align="left" src="Kids.jpg" width="300" height="300">
+														</p>
+													</div>
+													<div style="display:none" id="SHOWmovies">
+														<h1>Movies</h1>
+														<p><img align="left" src="Movies.jpg" width="300" height="300">
+														</p>
+													</div>
+												</div>
+
+	</div>
+</body>
+
+</html>
